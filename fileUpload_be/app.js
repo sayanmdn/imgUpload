@@ -8,7 +8,7 @@ app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 
 app.listen(3000, () => {
-    console.log("The server started on port 3000 !!!!!!");
+    console.log("The server started on port 3000 and 4200(the app)!!!!!!");
 });
 
 const storage = multer.diskStorage({
@@ -37,6 +37,7 @@ app.get("/", (req, res) => {
   app.post('/file', upload.single('file'), (req, res, next) => {
     const file = req.file;
     console.log(file.filename);
+
     if (!file) {
       const error = new Error('No File')
       error.httpStatusCode = 400

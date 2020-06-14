@@ -1,27 +1,39 @@
-<h1 style="text-align: center">Fun Of Heuristic File Uploader</h1>
-
+<h1 style="text-align: center">Image Uploader</h1>
+<br>
+<br>
 <div style="text-align: center">
   <form>      
     <div>
-      <input type="file" name="image" (change)="selectImage($event)" />
+      <label for="pan">Pan Card: &nbsp; &nbsp;</label> <br><br>
+      <input type="file" name="image1" (change)="selectImage($event)" accept="image/*" />
+    </div>
+    <div>
+      <button type="submit" (click)="onSubmit()" >Upload</button>
+    </div>
+    <br><br>
+    <div>
+      <label for="aandhar-front">Aandhar Card Front: &nbsp; &nbsp;</label> <br><br>
+      <input type="file" name="image2" (change)="selectImage($event)" accept="image/*" />
+    </div>
+    <div>
+      <button type="submit" (click)="onSubmit()" >Upload</button>
+    </div>
+    <br><br>
+    <div>
+      <label for="aandhar-back">Aandhar Card Back: &nbsp; &nbsp;</label> <br><br>
+      <input type="file" name="image3" (change)="selectImage($event)" accept="image/*" />
+    </div>
+    <div>
+      <button type="submit" (click)="onSubmit()" >Upload</button>
+    </div>
+    <br><br>
+    <div>
+      <label for="profile-picture">Profile Picture: &nbsp; &nbsp;</label> <br><br>
+      <input type="file" name="image4" (change)="selectImage($event)" accept="image/*" />
     </div>
     <br>
     <div>
-      <button type="submit" (click)="onSubmit()">Upload</button>
-    </div>
-  </form>
-</div>
-
-<hr>
-<h2 style="text-align: center">Multiple</h2>
-<div style="text-align: center">
-  <form>      
-    <div>
-      <input type="file" name="images" multiple (change)="selectMultipleImage($event)" />
-    </div>
-    <br>
-    <div>
-      <button type="submit" (click)="onMultipleSubmit()">Multiple Upload</button>
+      <button type="submit" (click)="onSubmit()" >Upload</button>
     </div>
   </form>
 </div>
